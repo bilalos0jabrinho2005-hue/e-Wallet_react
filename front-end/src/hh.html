@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Reservies</title>
+	<link href="hh.css" rel="stylesheet">
+</head>
+<body >
+	<header class="header-section">
+		<div class="header-section-left-part">
+		<h5>
+			Site de réservation des terrains de football
+		</h5>
+		</div>
+		<div class="header-section-right-part">
+			<a href="hh.html">Accueil</a>
+			<a href="">A propos</a>
+			<a href="">Nos activité</a>
+			<a href="">Mes réservations</a>
+			<a href="">Contact</a>
+		</div>
+	</header>
+	<main>
+		<div class="main-title">
+			<h1>La gestion inclusive des espaces sportifs de la
+			 préfecture des arrondissements
+			
+			</h1>
+			<br>
+			<br>
+			<h5>
+				Préparez-vous à vivre des moments intenses avec notre système de réservation en ligne.
+			</h5>
+		</div>
+		
+		<div class="reservation-button">
+			<button id="reservation-button">
+				<a href="hh2.html">
+					<h4>	Réserver maintenant</h4>
+				</a>
+			</button>
+		</div>
+	<img id="slider" src="terrain1.jpg" width="400">
+	</main>
+	<footer class="footer-section">
+		<div class="footer-left-section">
+Rejoignez-nous dans notre mission de cultiver le bien-être physique et le plaisir à travers le sport et les loisirs !
+		&copy;
+		</div>
+		
+	</footer>
+	<script>
+		
+  const images = ["terrain1.jpg", "terrain2.jpg", "terrain3.jpg"];
+
+  let index = 0;
+
+ setInterval(() => {
+    slider.style.opacity = 0;
+
+    setTimeout(() => {
+      index = (index + 1) % images.length;
+      slider.src = images[index];
+      slider.style.opacity = 1;
+    }, 500);
+
+  }, 3000);s
+	</script>
+	
+</body>
+</html>

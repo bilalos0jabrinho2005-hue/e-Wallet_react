@@ -1,17 +1,21 @@
-import Footer from "./footer";
-import Header from "./header";
-import Header1 from "./login/header1";
-import Mainsection1 from "./login/mainsection1";
-import Mainsection from "./mainsection";
-import Mainsection2 from "./dashboard/mainsection2";
-import Header2 from "./dashboard/header2";
+
+import { DashboardPage } from "./pages/dashboardpage";
+import { IndexPage } from "./pages/indexpage";
+import { LoginPage } from "./pages/loginpage";
+import { useState } from "react";
 export default function App(){   
+    const [isLoggedIn , setIsLoggedIn] = useState(false)
     return(
-        <>
-        <Header2/>
-        <Mainsection/>
-        <Footer/>
-        </>
+    <>
+    {
+      isLoggedIn ? (
+        <DashboardPage  />
+      ) 
+      : (
+        <LoginPage setIsLoggedIn={setIsLoggedIn}/>
+      )
+    }
+    </>
     )
 }
 

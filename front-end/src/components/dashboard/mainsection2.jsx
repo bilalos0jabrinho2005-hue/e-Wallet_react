@@ -1,48 +1,12 @@
-export default function Mainsection2(){
+import SideBar from "./sidebar";
+
+export default function MainSection2(){
     return(
     <>
     <main className="dashboard-main">
     <div className="dashboard-container">
-      
-      <aside className="dashboard-sidebar">
-        <nav className="sidebar-nav">
-          <ul>
-            <li className="active">
-              <a href="#overview">
-                <i className="fas fa-home"></i>
-                <span>Vue d'ensemble</span>
-              </a>
-            </li>
-            <li>
-              <a href="#transactions">
-                <i className="fas fa-exchange-alt"></i>
-                <span>Transactions</span>
-              </a>
-            </li>
-            <li>
-              <a href="#cards">
-                <i className="fas fa-credit-card"></i>
-                <span>Mes cartes</span>
-              </a>
-            </li>
-            <li>
-              <a href="#transfers">
-                <i className="fas fa-paper-plane"></i>
-                <span>Transferts</span>
-              </a>
-            </li>
-            <li className="separator"></li>
-            <li>
-              <a href="#support">
-                <i className="fas fa-headset"></i>
-                <span>Aide & Support</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    </div>
-    <div className="dashboard-content">        
+      <SideBar/>
+      <div className="dashboard-content">        
         <section id="overview" className="dashboard-section active">
           <div className="section-header">
             <h2>Bonjour, <span id="greetingName"> ? </span> !</h2>
@@ -123,7 +87,7 @@ export default function Mainsection2(){
               <i className="fas fa-plus"></i> Ajouter une carte
             </button>
           </div>
-          
+
           <div className="cards-grid" id="cardsGrid">
             <div className="card-item">
               <div className="card-preview visa">
@@ -147,6 +111,7 @@ export default function Mainsection2(){
             </div>
           </div>
         </section>
+      </div>
     </div>
 <section id="transfer-section" className="transfer-section hidden">
   <div className="section-header">

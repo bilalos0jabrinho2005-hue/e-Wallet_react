@@ -1,4 +1,6 @@
-import Gif from '../assets/e-Wallet6.gif';
+import Header1 from "../login/header1";
+import Footer from "./footer";
+
 export default function Mainsection(){
     return(
         <>
@@ -12,9 +14,10 @@ export default function Mainsection(){
         </div>
       </div>
       <div className="hero-image">
-        <img src={Gif} alt="E-Wallet Illustration"/>
+        <img src="" alt="E-Wallet Illustration"/>
       </div>
     </section>
+   
         </>
     )
 }
