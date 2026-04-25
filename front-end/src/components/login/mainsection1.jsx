@@ -6,12 +6,13 @@ export default function Mainsection1(props) {
 
     const [password , setPassword] = useState("");
     const [email , setEmail] = useState("");
-    const user = finduserbymail(email,password);
+    
     const handleLogin = () => {
+    const user = finduserbymail(email,password);
     if (user) {
-      props.setIsLoggedIn(true);
+      props.setIsLoggedIn(user);
     } else {
-      props.setIsLoggedIn(false);
+      alert("Invalid email or password");
     }
   };
 
